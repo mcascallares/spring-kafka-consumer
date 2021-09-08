@@ -7,7 +7,8 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@KafkaListener(id = "${spring.kafka.consumer.group-id}", topics = "${spring.kafka.consumer.topics}")
+@KafkaListener(id = "${spring.kafka.consumer.group-id}", 
+               topics = "${spring.kafka.consumer.topics}")
 public class Consumer {
 
     @KafkaHandler(isDefault = true)
